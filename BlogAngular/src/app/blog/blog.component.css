@@ -1,0 +1,18 @@
+.posts{
+
+    display:flex;
+    background-color:lightpink;
+    margin:10px;
+}
+
+
+.post{
+
+    padding:10px;
+    background-color: lightyellow;
+    border:1px solid blue
+}
+
+.post image{
+    height:100%;
+}

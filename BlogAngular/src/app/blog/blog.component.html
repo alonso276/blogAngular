@@ -1,1 +1,25 @@
-<p>blog works!</p>
+
+
+
+
+<div  class="posts">
+
+
+<div class="post" *ngFor= "let post of arrPosts">
+
+  
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top"[src]="post.imagen" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">{{post.titulo}}</h5>
+        <p class="card-text">{{post.texto}}</p>
+         <p>{{post.autor}}</p>
+         <p>{{post.fecha}}</p>
+         <p>{{post.categoria}}</p>
+        
+          
+        </div>
+      </div>
+    
+    
+</div>

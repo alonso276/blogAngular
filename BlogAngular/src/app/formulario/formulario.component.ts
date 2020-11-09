@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { DataService } from '../Services/data.service';
 
+
+
+
 @Component({
   selector: 'app-formulario',
   templateUrl: './formulario.component.html',
@@ -12,27 +15,38 @@ export class FormularioComponent implements OnInit {
   formularioForm: FormGroup;
 
   constructor(
-    private dataService: DataService
+   
+      private dataService:DataService,
+     
   ) {
-
+     
      this.formularioForm= new FormGroup({
+      
+      titulo:new FormControl(),
+      texto:new FormControl(),
+      autor:new FormControl(),
+      imagen:new FormControl(),
+      fecha:new FormControl(),
+      categoria:new FormControl(),
 
-      title:new FormControl(),
-      text:new FormControl(),
-      author:new FormControl(),
-      image:new FormControl(),
-      date:new FormControl(),
-      category:new FormControl(),
 
+     });
 
-     })
+    
    }
 
   ngOnInit(): void {
   }
 
-  onSubmit(){
-    console.log(this.formularioForm.value)
-  }
+   async onSubmit() {
+    // Datos del formulario
+    // console.log(this.formularioForm.value);
+     await this.dataService.agregarPost(this.formularioForm.value);
+    
+    }
 
+    
 }
+
+
+

@@ -6,7 +6,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/blog' },
   { path: 'blog', component: BlogComponent },
-  { path: 'formulario', component: FormularioComponent },
+  { path: 'new', component: FormularioComponent },
   { path: '**', redirectTo: '/blog' }
 
 
