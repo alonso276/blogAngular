@@ -66,7 +66,18 @@ export class DataService {
       resolve(this.arrPosts);
     });
   }
- 
+   
+    getPostbyCategoria(pCategoria):Promise<Post[]>{
+
+      return new Promise ((resolve, reject)=>{
+        const arrFiltrado= this.arrPosts.filter(post=>{
+          return post.categoria===pCategoria;
+
+      });
+       resolve(arrFiltrado);
+
+    })
+}
 }
 
 

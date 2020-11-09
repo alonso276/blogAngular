@@ -25,8 +25,17 @@ export class BlogComponent implements OnInit {
         this.arrPosts=posts;
       })
       .catch(error=> console.log(error));
-     
+    
+    }
 
+    async onChange($event){
+
+      if($event.target.value==='todas'){
+
+        this.arrPosts=await this.dataService.getAllPosts();
+      }else{
+        this.arrPosts=await this.dataService.getPostbyCategoria($event.target.value);
+      }
     }
 
 }
