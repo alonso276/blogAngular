@@ -7,22 +7,35 @@
     <div class="form-group">
         <label>Título</label>
         <input type="text" class="form-control" formControlName="titulo">
+        <p class="text-danger"
+            *ngIf="formularioForm.get('titulo').hasError('required') && formularioForm.get('titulo').touched">
+            * El titulo es requerido</p>
+
     </div>
     <div class="form-group">
         <label>Texto</label>
         <input type="text" class="form-control" formControlName="texto">
+        <p class="text-danger"
+            *ngIf="formularioForm.get('texto').hasError('required') && formularioForm.get('texto').touched">
+            * El texto es requerido</p>
+
     </div>
     <div class="form-group">
         <label>Autor</label>
         <input type="text" class="form-control" formControlName="autor">
+        <p class="text-danger"
+            *ngIf="formularioForm.get('autor').hasError('required') && formularioForm.get('autor').touched">
+            * El autor es requerido</p>
     </div>
     <div class="form-group">
         <label>Imagen</label>
         <input type="text" class="form-control" formControlName="imagen">
+        
     </div>
     <div class="form-group">
-        <label>Fecha</label>
-        <input type="date" class="form-control" formControlName="fecha">
+        <label>Fecha (dd/mm/aaaa)</label>
+        <input type="Date" class="form-control" formControlName="fecha">
+
     </div>
     <div class="form-group">
         <label>Categoria</label>
@@ -32,8 +45,13 @@
             <option value="lengua">Lengua</option>
             <option value="música">Música</option>
         </select>
-    </div>
-        <input type="submit" value="Enviar" class="btn btn-success">
+        <p class="text-danger"
+            *ngIf="formularioForm.get('categoria').hasError('required') && formularioForm.get('categoria').touched">
+            * La categoría es requerida</p>
+      </div>
+
+   
+        <input type="submit" value="Enviar" class="btn btn-success" [disabled]="!formularioForm.valid">
 </form>
 
 

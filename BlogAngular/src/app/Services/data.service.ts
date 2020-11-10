@@ -17,16 +17,16 @@ export class DataService {
       texto:'Esta letra nació de la necesidad de representar un nuevo sonido, inexistente en latín. El castellano medieval escogió el dígrafo nn, que se solía representar abreviadamente mediante una sola n con una rayita más o menos ondulada encima; así surgió la ñ',
       autor:'Aula Hispánica',
       imagen: './assets/images/n.png',
-      fecha: 27,
-      categoria:'lengua',
+      fecha: new Date(),
+      categoria:'Lengua',
       },
 
       { titulo:'Cantabria infinita',
       texto:'Cantabria es tierra de mar y montaña de verde y azul y en ambos entornos encontramos parajes únicos, a veces escondidos, que hacen las delicias de nuestros visitantes y amigos. Hoy queremos enseñaros como vivir una experiencia que aúne agua y montaña.',
       autor:'Turismo Cantabria',
       imagen: './assets/images/cantabria.jpg',
-      fecha: 27,
-      categoria:'viajes',
+      fecha: new Date(),
+      categoria:'Viajes',
 
     },
 
@@ -35,8 +35,8 @@ export class DataService {
       texto:'La banda islandesa Sigur Rós ha sorprendido a sus seguidores en redes sociales con el anuncio de lanzamiento de un nuevo álbum orquestal, el cual llevará por titulo “Odin’s Raven Magic”. Acompañando esta noticia, han lanzado un nuevo tema perteneciente al álbum, el cual lleva por título Dvergmál',
       autor:'Islandia mola',
       imagen: './assets/images/sigur.jpg',
-      fecha: 27,
-      categoria:'música',
+      fecha: new Date(),
+      categoria:'Música',
       },
 
   ];
