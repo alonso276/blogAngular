@@ -1,3 +1,6 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&display=swap');
+  </style>
 
 <select  (change)="onChange($event)">
 
@@ -9,14 +12,15 @@
 
 </select>
 
+<!-- <div class="container-fluid"> -->
+<!-- <div class="posts"> -->
 
-<div  class="posts">
 
+<div class="post container-fluid" *ngFor= "let post of arrPosts">
 
-<div class="post" *ngFor= "let post of arrPosts">
-
-  
-    <div class="card" style="width: 18rem;">
+  <div class="row align-items-center">
+       <div class="col-sm-6">
+       <div class="card" style="width: 30rem;">
         <img class="card-img-top"[src]="post.imagen" alt="Card image cap">
         <div class="card-body">
         <h5 class="card-title">{{post.titulo}}</h5>
@@ -25,9 +29,10 @@
          <p>{{post.fecha}}</p>
          <p>{{post.categoria}}</p>
         
-          
+          </div>
+          </div>
+          </div>
         </div>
       </div>
     
-    
-</div>
+  

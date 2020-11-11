@@ -8,6 +8,8 @@ import { DataService } from '../Services/data.service';
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css']
 })
+
+
 export class BlogComponent implements OnInit {
 
   arrPosts:Post[];

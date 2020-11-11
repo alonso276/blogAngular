@@ -1,18 +1,24 @@
-.posts{
 
-    display:flex;
-    background-color:lightpink;
-    margin:10px;
-}
 
 
 .post{
+    font-family: 'Bitter', serif;
+    background-color:lightpink;
+    
+}
+
+
+.posts{
 
     padding:10px;
     background-color: lightyellow;
     border:1px solid blue
 }
 
-.post image{
-    height:100%;
-}
+
+.card-img-top {
+        width: 100%;
+        height: 25vw;
+        object-fit: cover;
+    }
+   
