@@ -2,6 +2,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,300&display=swap');
   </style>
 
+<div class="category">
+
 <select  (change)="onChange($event)">
 
 <option selected>Elige una categoría</option>
@@ -11,28 +13,26 @@
 <option value="música">Música</option>
 
 </select>
+</div>
 
 <!-- <div class="container-fluid"> -->
 <!-- <div class="posts"> -->
 
 
-<div class="post container-fluid" *ngFor= "let post of arrPosts">
+  <div class="row ">
+    <div class="col-12 .col-sm-6"*ngFor= "let post of arrPosts">
 
-  <div class="row align-items-center">
-       <div class="col-sm-6">
-       <div class="card" style="width: 30rem;">
-        <img class="card-img-top"[src]="post.imagen" alt="Card image cap">
-        <div class="card-body">
-        <h5 class="card-title">{{post.titulo}}</h5>
-        <p class="card-text">{{post.texto}}</p>
-         <p>{{post.autor}}</p>
-         <p>{{post.fecha}}</p>
-         <p>{{post.categoria}}</p>
-        
-          </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    
+  <div class="card text-white bg-primary" >
+    <div class="card-header">{{post.titulo}}</div>
+    <img class="card-img-top"[src]="post.imagen" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">{{post.texto}}</p>
+      <p>Autor: {{post.autor}}</p>
+      <p>{{post.fecha}}</p>
+     <p class="cat">{{post.categoria}}</p>
+    </div>
+  </div>
+  
+</div>
+ 
   

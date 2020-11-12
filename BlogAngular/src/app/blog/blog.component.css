@@ -1,24 +1,54 @@
 
-
-
-.post{
-    font-family: 'Bitter', serif;
-    background-color:lightpink;
+.category select{
+    padding:0.3rem;
+    margin:2rem;
+    color:blue;
+    border:3px solid blue;
     
 }
 
+.post{
+    font-family: 'Catamaran', sans-serif;
+    
+    
+}
 
+.category, .row{
+    background-color:#fff5e6;
+}
 .posts{
 
     padding:10px;
     background-color: lightyellow;
-    border:1px solid blue
+    border:1px solid #ADD8E6;
 }
 
+.card{
+    margin:30px;
+    max-width:800px;
+    margin:0 auto;
+    margin-bottom:5rem;
+
+}
+
+.card-header{
+    font-weight:700;
+    font-size:1.4rem;
+    
+}
+
+.card .cat{
+    text-transform: uppercase;
+}
 
 .card-img-top {
         width: 100%;
-        height: 25vw;
+        height: 40vw;
         object-fit: cover;
     }
-   
+
+  
+.card:hover{
+   transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,.36), 0 4px 8px rgba(0,0,0,.06);
+    }

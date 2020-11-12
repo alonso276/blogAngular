@@ -1,7 +1,15 @@
 .header{
 
-    background: url('background.jpg');
+    background: url('pinky.jpg');
     color:white;
+    height:10vh;
+    
    
     
+}
+
+.header h1{
+    text-align:center;
+    padding-top:2rem;
+
 }
