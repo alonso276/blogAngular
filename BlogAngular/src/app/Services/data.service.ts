@@ -102,6 +102,10 @@ export class DataService {
 
     })
 }
+borrarPost(pIndice: number) {
+  this.arrPosts.splice(pIndice, 1);
+  localStorage.setItem('posts', JSON.stringify(this.arrPosts));
+}
 }
 
 

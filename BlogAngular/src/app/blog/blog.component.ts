@@ -40,4 +40,7 @@ export class BlogComponent implements OnInit {
       }
     }
 
+    onClickBorrar(pIndice: number) {
+      this.dataService.borrarPost(pIndice);
+    }
 }

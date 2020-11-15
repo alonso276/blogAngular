@@ -20,7 +20,7 @@
 
 
   <div class="row ">
-    <div class="col-12 .col-sm-6"*ngFor= "let post of arrPosts">
+    <div class="col-12 .col-sm-6"*ngFor= "let post of arrPosts; let indice = index;">
 
   <div class="card text-white bg-primary" >
     <div class="card-header">{{post.titulo}}</div>
@@ -30,6 +30,7 @@
       <p>Autor: {{post.autor}}</p>
       <p>{{post.fecha}}</p>
      <p class="cat">{{post.categoria}}</p>
+     <button class="btn btn-sm btn-danger" (click)="onClickBorrar(indice)">Eliminar</button>
     </div>
   </div>
   
