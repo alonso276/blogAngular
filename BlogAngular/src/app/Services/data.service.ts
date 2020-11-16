@@ -10,7 +10,12 @@ export class DataService {
 
   constructor() { 
 
-
+    if (localStorage.getItem('nuevoPost')) {
+      this.arrPosts = JSON.parse(localStorage.getItem('nuevoPost'));
+     }  else {
+      this.arrPosts = []; 
+  
+  }
   this.arrPosts=[
 
     { titulo:'El origen de la ñ',
@@ -65,12 +70,7 @@ export class DataService {
       }
   ];
 
-  if (localStorage.getItem('nuevoPost')) {
-    this.arrPosts = JSON.parse(localStorage.getItem('nuevoPost'));
-  //  }  else {
-  //   this.arrPosts = []; 
-
-}
+ 
 
   }
 
@@ -87,7 +87,7 @@ export class DataService {
       this.arrPosts.push(pPost);
 
       localStorage.setItem('nuevoPost', JSON.stringify(this.arrPosts))
-      resolve(this.arrPosts);
+       resolve(this.arrPosts);
     });
   }
    
